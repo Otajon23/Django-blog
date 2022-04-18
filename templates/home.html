@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Bosh sahifa {% endblock title %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        Xush kelibsiz {{ user.username | title }}
+
+        <h1 class="display-4">Assalomu alaykum</h1>
+
+        <hr class="my-4">
+
+
+    {% else %}
+        <p>Saytga kirmagansiz</p>
+{#        <a href="{% url 'login' %}" class="btn btn-outline-primary">Kirish</a>#}
+{#        <a href="{% url 'signup' %}" class="btn btn-primary">Ro'yxatdan o'tish</a>#}
+    {% endif %}
+
+{% endblock content %}
